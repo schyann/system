@@ -1,0 +1,185 @@
+*{
+  font-family: verdana;
+}
+body {
+  background-color: #484848;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+}
+
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  position: relative;
+}
+
+
+#login-form-wrap {
+  background-color: #fff;
+  height: 450px;
+  width: 40%;
+  margin: 35px auto;
+  margin-top: 80px;
+  text-align: center;
+  padding: 25px 0 0 0;
+  border-radius: 4px;
+  box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
+}
+
+#login-form {
+  padding: 0 60px;
+}
+
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 2px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0 0 0 10px;
+  margin: 0;
+  color: #000000;
+  border: 1px solid #000000;
+  font-style: normal;
+  font-size: 16px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  display: inline-block;
+  background: none;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #000000;
+}
+input[type="text"]:focus:invalid,
+input[type="password"]:focus:invalid {
+  color: #000000;
+  border-color: #000000;
+}
+
+
+input[type="submit"] {
+  border: none;
+  display: block;
+  background-color: black;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+input[type="submit"]:hover {
+  background-color: gray;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0%;
+  left: -250px;
+  width: 280px;
+  height: 100%;
+  background: #000000;
+  transition: all .5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: rgb(101, 101, 101);
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 25px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  text-decoration: none;
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #000000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #ffffff;
+  padding: 4px 9px;
+  transition: all .5s ease;
+  margin-left: 100px;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+#check:checked ~ section{
+  margin-left: 250px;
+}
+section{
+  background: url(k.png) no-repeat;
+  background-position: center;
+  background: size 100px;
+  height: 100vh;
+  transition: all .5s;
+}
+ul{
+  padding-left: 0%;
+}
